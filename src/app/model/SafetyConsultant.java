@@ -1,10 +1,12 @@
 package app.model;
 
-public class SafetyConsultant extends Specialist{
-    private boolean isInNBU;
+import java.util.ArrayList;
 
-    public SafetyConsultant(boolean isTaken, double cost, String lengthOfPractice, String highestEducation, String certificates, boolean isInNBU) {
-        super(isTaken, cost, lengthOfPractice, highestEducation, certificates);
+public class SafetyConsultant extends Specialist{
+    private final boolean isInNBU;
+
+    public SafetyConsultant(String name, boolean isTaken, double cost, String lengthOfPractice, String highestEducation, ArrayList<String> certificates, boolean isInNBU) {
+        super(name, isTaken, cost, lengthOfPractice, highestEducation, certificates);
         this.isInNBU = isInNBU;
     }
 

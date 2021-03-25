@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="459.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="app.gui.controllers.SpecialistController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddc03b" height="465.0" stroke="BLACK" strokeType="INSIDE"
+               strokeWidth="0.0" width="507.0"/>
+    <Label layoutX="78.0" layoutY="14.0" text="Vytvor špecialistu">
+        <font>
+          <Font name="Bodoni MT" size="46.0"/>
+        </font>
+    </Label>
+    <TabPane fx:id="tabsType" layoutX="85.0" layoutY="101.0" prefHeight="274.0" prefWidth="336.0" side="LEFT"
+             tabClosingPolicy="UNAVAILABLE">
+        <effect>
+            <ColorAdjust/>
+        </effect>
+        <Tab text="Programátor">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <effect>
+                    <ColorAdjust/>
+                </effect>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e3e4" height="274.0" stroke="#e4d3d3"
+                           strokeType="INSIDE" strokeWidth="0.0" width="308.0"/>
+                <TextField fx:id="textName1" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Meno"/>
+                <TextField fx:id="textValue1" layoutX="14.0" layoutY="44.0" prefWidth="279.0"
+                           promptText="Cena za deň"/>
+                <TextField fx:id="textPrax1" layoutX="14.0" layoutY="74.0" prefWidth="279.0"
+                           promptText="Dĺžka praxe"/>
+                <TextField fx:id="textEdu1" layoutX="14.0" layoutY="104.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Dosiahnuté vzdelanie"/>
+                <ChoiceBox fx:id="choiceType1" layoutX="14.0" layoutY="134.0" prefHeight="25.0" prefWidth="279.0"/>
+                <TextField fx:id="textCertificate1" layoutX="14.0" layoutY="164.0" prefWidth="279.0"
+                           promptText="Certifikáty"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="   Bezpečák   ">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="298.0">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e3e4" height="274.0" stroke="#e4d3d3"
+                           strokeType="INSIDE" strokeWidth="0.0" width="308.0"/>
+                <TextField fx:id="textName2" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Meno"/>
+                <TextField fx:id="textValue2" layoutX="14.0" layoutY="44.0" prefWidth="279.0"
+                           promptText="Cena za deň"/>
+                <TextField fx:id="textPrax2" layoutX="14.0" layoutY="74.0" prefWidth="279.0"
+                           promptText="Dĺžka praxe"/>
+                <TextField fx:id="textEdu2" layoutX="14.0" layoutY="104.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Dosiahnuté vzdelanie"/>
+                <CheckBox fx:id="checkAudit2" layoutX="14.0" layoutY="138.0" mnemonicParsing="false"
+                          prefHeight="17.0" prefWidth="280.0" text="Audítor kybernetickej spoločnosti"/>
+                <TextField fx:id="textCertificate2" layoutX="14.0" layoutY="164.0" prefWidth="279.0"
+                           promptText="Certifikáty"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Administrátor">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e3e4" height="274.0" stroke="#e4d3d3"
+                           strokeType="INSIDE" strokeWidth="0.0" width="308.0"/>
+                <TextField fx:id="textName3" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Meno"/>
+                <TextField fx:id="textValue3" layoutX="14.0" layoutY="44.0" prefWidth="279.0"
+                           promptText="Cena za deň"/>
+                <TextField fx:id="textPrax3" layoutX="14.0" layoutY="74.0" prefWidth="279.0"
+                           promptText="Dĺžka praxe"/>
+                <TextField fx:id="textEdu3" layoutX="14.0" layoutY="104.0" prefHeight="25.0" prefWidth="279.0"
+                           promptText="Dosiahnuté vzdelanie"/>
+                <ChoiceBox fx:id="choiceType3" layoutX="14.0" layoutY="134.0" prefHeight="25.0"
+                           prefWidth="279.0"/>
+                <TextField fx:id="textCertificate3" layoutX="14.0" layoutY="164.0" prefWidth="279.0"
+                           promptText="Certifikáty"/>
+                <TextField fx:id="textPlatform3" layoutX="14.0" layoutY="194.0" prefWidth="279.0"
+                           promptText="Preferovaná platforma"/>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+    <Button fx:id="btnOK" layoutX="277.0" layoutY="399.0" mnemonicParsing="false" onAction="#proceed" prefHeight="46.0"
+            prefWidth="53.0" text="OK"/>
+    <Button fx:id="btnCancel" layoutX="192.0" layoutY="399.0" mnemonicParsing="false" onAction="#cancel"
+            prefHeight="46.0" prefWidth="52.0" text="Zruš"/>
+    <Label fx:id="warning" layoutX="130.0" layoutY="379.0" prefHeight="17.0" prefWidth="247.0" textAlignment="CENTER"
+           textFill="RED"/>
+</Pane>

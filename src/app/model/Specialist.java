@@ -1,13 +1,17 @@
 package app.model;
 
-public class Specialist {
-    protected boolean isTaken;
-    protected double cost;
-    protected String lengthOfPractice;
-    protected String highestEducation;
-    protected String certificates;
+import java.util.ArrayList;
 
-    public Specialist(boolean isTaken, double cost, String lengthOfPractice, String highestEducation, String certificates) {
+public class Specialist {
+    protected final String name;
+    protected boolean isTaken;
+    protected final double cost;
+    protected final String lengthOfPractice;
+    protected final String highestEducation;
+    protected final ArrayList<String> certificates;
+
+    public Specialist(String name, boolean isTaken, double cost, String lengthOfPractice, String highestEducation, ArrayList<String> certificates) {
+        this.name = name;
         this.isTaken = isTaken;
         this.cost = cost;
         this.lengthOfPractice = lengthOfPractice;
@@ -31,8 +35,12 @@ public class Specialist {
         return highestEducation;
     }
 
-    public String getCertificates() {
+    public ArrayList<String> getCertificates() {
         return certificates;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setTaken(boolean taken) {

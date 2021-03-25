@@ -1,10 +1,12 @@
 package app.model;
 
-public class Administrator extends Programator{
-    private String preferedSystem;
+import java.util.ArrayList;
 
-    public Administrator(boolean isTaken, double cost, String lengthOfPractice, String highestEducation, String certificates, String focusType, String preferedSystem) {
-        super(isTaken, cost, lengthOfPractice, highestEducation, certificates, focusType);
+public class Administrator extends Programator{
+    private final String preferedSystem;
+
+    public Administrator(String name, boolean isTaken, double cost, String lengthOfPractice, String highestEducation, ArrayList<String> certificates, String focusType, String preferedSystem) {
+        super(name, isTaken, cost, lengthOfPractice, highestEducation, certificates, focusType);
         this.preferedSystem = preferedSystem;
     }
 
